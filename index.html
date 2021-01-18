@@ -20,6 +20,8 @@
                     <p>Welcome to Akan Name Generator!!!This web application will help you find your Akan name. The Akan people frequently name their children after the day of the week they were born. Fill out the form below and press submit to find out
                         your Akan name..
                     </p>
+                    <h4><strong>Akan Name will be displayed here</strong></h4>
+                    <p id="result"></p>
                 </blockquote>
                 <figcaption class="blockquote-footer">
                     Someone famous in <cite title="Source Title">Wakanda Forever</cite>
@@ -68,7 +70,11 @@
                 </div>
 
                 <br>
-                <button id="get-name" type="submit" class="btn btn-primary" name="" value="Generate name">Submit</button>
+                <input id="get-name" type="submit" name="" value="Generate name">
+                <br>
+            </form>
+            <form onsubmit="return clearForm()">
+                <input type="submit" name="" id="clear" value="clear input">
             </form>
         </div>
 
