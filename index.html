@@ -15,18 +15,18 @@
     <div class="akanform">
         <h1>Akan Form</h1>
         <div class="main">
-            <form>
-                <figure>
-                    <blockquote class="blockquote">
-                        <p>Welcome to Akan Name Generator!!!This web application will help you find your Akan name. The Akan people frequently name their children after the day of the week they were born. Fill out the form below and press submit to find
-                            out your Akan name..
-                        </p>
-                    </blockquote>
-                    <figcaption class="blockquote-footer">
-                        Someone famous in <cite title="Source Title">Wakanda Forever</cite>
-                    </figcaption>
-                </figure>
-
+            <figure>
+                <blockquote class="blockquote">
+                    <p>Welcome to Akan Name Generator!!!This web application will help you find your Akan name. The Akan people frequently name their children after the day of the week they were born. Fill out the form below and press submit to find out
+                        your Akan name..
+                    </p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    Someone famous in <cite title="Source Title">Wakanda Forever</cite>
+                </figcaption>
+            </figure>
+            <!--form-->
+            <form class="akanform" onsubmit="akanGenerator()">
                 <div class="row align-items-start" id="name">
                     <div class="col">
                         <label for="century" class="col-sm-2 col-form-label">Century</label>
@@ -67,7 +67,8 @@
                     <label class="form-check-label" for="inlineCheckbox2">Female</label>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <br>
+                <button id="get-name" type="submit" class="btn btn-primary" name="" value="Generate name">Submit</button>
             </form>
         </div>
 
