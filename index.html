@@ -27,28 +27,28 @@
                 </figure>
                 <div class="row align-items-start" id="name">
                     <div class="col">
-                        <label for="century" class="col-sm-2 col-form-label" id="century">Century</label>
+                        <label for="century" class="col-sm-2 col-form-label">Century</label>
                         <div class="col-sm-10">
                             <input type="century" class="form-control" placeholder="Enter Century" id="century" required min="0" max="20">
                         </div>
                     </div>
                     <!--Year-->
                     <div class="col">
-                        <label for="year" class="col-sm-2 col-form-label" id="year">Year</label>
+                        <label for="year" class="col-sm-2 col-form-label">Year</label>
                         <div class="col-sm-10">
                             <input type="year" class="form-control" placeholder="Enter Year" id="year" required min="0" max="100">
                         </div>
                     </div>
                     <!--Month-->
                     <div class="col">
-                        <label for="month" class="col-sm-2 col-form-label" id="month">Month</label>
+                        <label for="month" class="col-sm-2 col-form-label">Month</label>
                         <div class="col-sm-10">
                             <input type="month" class="form-control" placeholder="Enter Month" id="month" required min="0" max="12">
                         </div>
                     </div>
                     <!--Day-->
                     <div class="col">
-                        <label for="day" class="col-sm-2 col-form-label" id="day">Day</label>
+                        <label for="day" class="col-sm-2 col-form-label">Day</label>
                         <div class="col-sm-10">
                             <input type="day" class="form-control" placeholder="Enter Day" id="day" required min="0" max="31">
                         </div>
@@ -56,24 +56,14 @@
 
                 </div>
 
-                <fieldset class="row mb-3">
-                    <legend class="col-form-label col-sm-2 pt-0">Choose Gender</legend>
-                    <div class="col-sm-10">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                            <label class="form-check-label" for="gridRadios1">
-                        Male
-                      </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                            <label class="form-check-label" for="gridRadios2">
-                        Female
-                      </label>
-                        </div>
-
-                    </div>
-                </fieldset>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="male">
+                    <label class="form-check-label" for="inlineCheckbox1">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="female">
+                    <label class="form-check-label" for="inlineCheckbox2">Female</label>
+                </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
