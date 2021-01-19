@@ -25,6 +25,9 @@ function akanGenerator() {
         "Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"
     ];
 
+    let CC = year.splice(0, 2);
+    let YY = year.splice(2, 4);
+
     //Formula for calculating akan names
 
 }
