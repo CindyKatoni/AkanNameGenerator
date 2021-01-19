@@ -5,15 +5,13 @@ akanform.addEventListener("submit", function(event) {
 })
 
 function akanGenerator() {
+
     //Validating month and day
     function validator() {
         if ((Number(day) < 0 || Number(day) > 31) || (Number(month) < 0 || Number(month) > 12)) {
             alert("Enter valid day or month")
         }
     }
-
-
-
 
 
 
@@ -53,13 +51,7 @@ function akanGenerator() {
 
 
 
-    // function dayValidator(){
-    //     if (!(0 < day <= 31 )){
-    //         alert("Enter valid day")
-    //     }
-    // }
-
     //Formula for calculating akan names
-    // let dayofweekFormula = (((Number(CC) / 4) - 2 * Number(CC) - 1) + ((5 * Number(YY) / 4)) + ((26 * (Number(MM) + 1) / 10)) + Number(DD)) % 7;
-
+    let dayofweekFormula = Math.floor((((Number(CC) / 4) - 2 * Number(CC) - 1) + ((5 * Number(YY) / 4)) + ((26 * (Number(month) + 1) / 10)) + Number(day)) % 7);
+    console.log(dayofweekFormula)
 }
