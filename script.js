@@ -1,4 +1,21 @@
+let akanform = document.getElementById("akanform");
+
+akanform.addEventListener("submit", function(event) {
+    event.preventDefault();
+})
+
 function akanGenerator() {
+    //Validating month and day
+    function validator() {
+        if ((Number(day) < 0 || Number(day) > 31) || (Number(month) < 0 || Number(month) > 12)) {
+            alert("Enter valid day or month")
+        }
+    }
+
+
+
+
+
 
     let year = document.getElementById("year").value;
     let month = document.getElementById("month").value;
@@ -11,6 +28,8 @@ function akanGenerator() {
     if (document.getElementById("female-input").checked == true) {
         female = "female"
     };
+
+    validator()
 
     //
     let daysOfWeek = [
@@ -25,9 +44,22 @@ function akanGenerator() {
         "Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"
     ];
 
-    let CC = year.splice(0, 2);
-    let YY = year.splice(2, 4);
+    console.log(year, month, day, male, female)
+
+    let CC = year.slice(0, 2);
+    let YY = year.slice(2, 4);
+
+    console.log(CC, YY);
+
+
+
+    // function dayValidator(){
+    //     if (!(0 < day <= 31 )){
+    //         alert("Enter valid day")
+    //     }
+    // }
 
     //Formula for calculating akan names
+    // let dayofweekFormula = (((Number(CC) / 4) - 2 * Number(CC) - 1) + ((5 * Number(YY) / 4)) + ((26 * (Number(MM) + 1) / 10)) + Number(DD)) % 7;
 
 }
