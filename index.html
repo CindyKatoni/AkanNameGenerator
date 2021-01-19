@@ -30,52 +30,50 @@
             <!--form-->
             <form class="akanform" onsubmit="akanGenerator()">
                 <div class="row align-items-start" id="name">
-                    <div class="col">
-                        <label for="century" class="col-sm-2 col-form-label">Century</label>
-                        <div class="col-sm-10">
-                            <input type="number" class="form-control" placeholder="Enter Century" id="century" required min="0" max="20">
-                        </div>
-                    </div>
+
                     <!--Year-->
                     <div class="col">
                         <label for="year" class="col-sm-2 col-form-label">Year</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" placeholder="Enter Year" id="year" required min="0" max="100">
+                            <input type="number" class="form-control" placeholder="Enter Year" id="year" min="0" max="100">
                         </div>
                     </div>
                     <!--Month-->
                     <div class="col">
                         <label for="month" class="col-sm-2 col-form-label">Month</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" placeholder="Enter Month" id="month" required min="0" max="12">
+                            <input type="number" class="form-control" placeholder="Enter Month" id="month" min="0" max="12">
                         </div>
                     </div>
                     <!--Day-->
                     <div class="col">
                         <label for="day" class="col-sm-2 col-form-label">Day</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" placeholder="Enter Day" id="day" required min="0" max="31">
+                            <input type="number" class="form-control" placeholder="Enter Day" id="day" min="0" max="31">
                         </div>
                     </div>
 
                 </div>
 
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="male-input" value="male" required>
-                    <label class="form-check-label" for="inlineCheckbox1">Male</label>
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="male-input">
+                    <label class="form-check-label" for="male-input">
+                      male
+                    </label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="female-input" value="female" required>
-                    <label class="form-check-label" for="inlineCheckbox2">Female</label>
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="female-input">
+                    <label class="form-check-label" for="female-input">
+                      female
+                    </label>
                 </div>
 
                 <br>
                 <input id="get-name" type="submit" name="" value="Generate name">
-                <br>
+                <br><br/>
+                <input type="submit" name="" id="clear" value="clear input" onclick="clear_form()">
             </form>
-            <form onsubmit="return clearForm()">
-                <input type="submit" name="" id="clear" value="clear input">
-            </form>
+
         </div>
 
 
