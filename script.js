@@ -20,6 +20,7 @@ function akanGenerator() {
     let day = document.getElementById("day").value;
     let male, female;
 
+
     if (document.getElementById("male-input").checked == true) {
         male = "male"
     };
@@ -27,7 +28,10 @@ function akanGenerator() {
         female = "female"
     };
 
+
     validator()
+        //Validator variable
+    let daymonthValid = validator();
 
     //
     let daysOfWeek = [
@@ -53,5 +57,31 @@ function akanGenerator() {
 
     //Formula for calculating akan names
     let dayofweekFormula = Math.floor((((Number(CC) / 4) - 2 * Number(CC) - 1) + ((5 * Number(YY) / 4)) + ((26 * (Number(month) + 1) / 10)) + Number(day)) % 7);
-    console.log(dayofweekFormula)
+    console.log(dayofweekFormula);
+
+    //Index of dayofweekFormula
+    let index;
+    if (dayofweekFormula == 0) {
+        index = 6;
+    } else {
+        index = dayofweekFormula - 1;
+    }
+    console.log(index)
+
+    //check gender,month, day,then display name
+    if (male == "male" && daymonthValid) {
+        document.getElementById('result').textContent = "You were born on a " + daysOfWeek[index] + " ,your Akan Name is " + maleAkanNames[index];
+        document.getElementById('display').textContent = "This is your Akan Name";
+        document.getElementById('result').style.fontSize = "18px";
+        return false;
+    } else if (female == "female" && daymonthValid) {
+        document.getElementById('result').textContent = "You were born on a " + daysOfWeek[index] + " ,your Akan Name is " + femaleAkanNames[index];
+        document.getElementById('display').textContent = "This is your Akan Name";
+        document.getElementById('result').style.fontSize = "18px";
+        return false;
+    } else {
+        return false;
+    }
+
+
 }
